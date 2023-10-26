@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         // Press Opt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-//        String className = "mypackage.MyClass";
+        String className = "mypackage.MyClass";
 //        String javaCode = "package mypackage;\n" +
 //                "public class MyClass implements Runnable {\n" +
 //                "    public void run() {\n" +
@@ -27,7 +27,7 @@ public class Main {
         Factory factory = new Factory();
         String myjavaCode = factory.generateCode(Person.class);
         System.out.println(myjavaCode);
-        Class jsonGenerator = CompilerUtils.CACHED_COMPILER.loadFromJava("mypackage.MyClass", myjavaCode);
+        Class jsonGenerator = CompilerUtils.CACHED_COMPILER.loadFromJava("org.example.JsonGenerator", myjavaCode);
         System.out.println(jsonGenerator.getName());
 
         Constructor<?> cons = jsonGenerator.getConstructor();

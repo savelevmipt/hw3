@@ -5,7 +5,8 @@ import java.lang.reflect.Method;
 
 public class Factory {
     String generateCode (Class<?> clazz) {
-        StringBuilder javaCode = new StringBuilder("class JsonGenerator {\n" +
+        StringBuilder javaCode = new StringBuilder("package org.example;\n" +
+                "class JsonGenerator {\n" +
                 "   String generate(" + clazz.getName() + " o) {\n" +
                 "       return \"{\" + ");
         System.out.println(clazz.getFields().length);
