@@ -1,5 +1,5 @@
 package org.example;
 
-public interface Generator {
-    public String generate(Class<?> clazz);
+public interface Generator<T> {
+    public String generate(T o);
 }
