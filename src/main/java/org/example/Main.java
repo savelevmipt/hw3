@@ -28,7 +28,5 @@ public class Main {
         Generator<Empty> r = f.getJsonGenerator(Empty.class);
         String jsonEmpty = r.generate(new Empty());
         System.out.println(jsonEmpty);
-
-
     }
 }
